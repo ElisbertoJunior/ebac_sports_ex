@@ -23,7 +23,7 @@ const ProdutoComponent = ({ produto, estaNosFavoritos }: Props) => {
 
   function favoritar(produto: Produto) {
     if (favorites.find((p) => p.id === produto.id)) {
-      dispatch(removeItem(produto.id))
+      dispatch(removeItem(produto))
     } else {
       dispatch(addFavorites(produto))
     }
